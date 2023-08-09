@@ -1,0 +1,56 @@
+header {
+  background: rgb(72, 72, 72);
+  height: 180px;
+  position: relative;
+}
+header img {
+  position: absolute;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  top: 20px;
+  left: 20px;
+  width: 220px;
+  height: 90px;
+}
+.hgroup {
+  position: absolute;
+  left: 280px;
+  top: 40px;
+}
+.hgroup h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.hgroup h2 {
+  font-size: 24px;
+}
+nav {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: rgb(150, 146, 146);
+}
+
+nav ul {
+  padding: 10px 0px 10px 25px;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a:hover,
+nav a.current {
+  color: black;
+  text-decoration: underline;
+}
+nav a:hover {
+  font-weight: 800;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
