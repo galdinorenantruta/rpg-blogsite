@@ -17,7 +17,9 @@ const Navbar = () => {
             alt=""
             className="w-40 h-14 transform scale-x-[-1]"
           />
-          <h1 className="lg:mr-20 md:block text-3xl">Detonando Rpg</h1>
+          <h1 className=" text-3xl md:mr-20 md:block  md:text-4xl">
+            Detonando Rpg
+          </h1>
           <button
             className="text-white text-xl focus:outline-none md:hidden"
             onClick={toggleMenu}
@@ -30,8 +32,8 @@ const Navbar = () => {
             menuOpen ? "block" : "hidden"
           } mt-2 md:flex md:mt-0 md:space-x-6`}
         >
-          <nav className=" md:p-4 w-full md:absolute md:bottom-0 md:left-0 rounded  bg-gray-600">
-            <ul className="flex flex-col md:flex-row md:justify-evenly p-4">
+          <nav className="  w-full  md:absolute  md:bottom-0 md:left-0 rounded  bg-gray-600">
+            <ul className="flex flex-col md:flex-row  md:justify-evenly p-4">
               <li className="mb-2 md:mb-0">
                 <a
                   href="/"
