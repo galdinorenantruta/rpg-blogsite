@@ -12,15 +12,23 @@ const Article01 = () => {
   }
   return (
     <div>
-      <content>
+      <article className="mt-8 p-7">
         <Link to="/">
-          <img id="image" src={selectedItem.image} alt={selectedItem.title} />
-          <article>
+          <div className="w-3/4">
+            <img
+              className="p-4 mx-auto"
+              id="image"
+              src={selectedItem.image}
+              alt={selectedItem.title}
+            />
+          </div>
+
+          <div>
             <h1>{selectedItem.title}</h1>
             <p>{selectedItem.text}</p>
-          </article>
+          </div>
         </Link>
-      </content>
+      </article>
     </div>
   );
 };
