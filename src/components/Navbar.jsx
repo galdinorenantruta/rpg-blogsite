@@ -8,6 +8,9 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const handleDropdown = () => {
+    setDropDown(!dropdown);
+  };
 
   return (
     <div>
@@ -47,11 +50,11 @@ const Navbar = () => {
                 <a
                   href="#"
                   className="text-white hover:underline md:hover:underline"
+                  onClick={handleDropdown}
                 >
                   Clássicos
                 </a>
                 <div
-                  onClick={() => setDropDown(!dropdown)}
                   className={`${
                     dropdown ? "block" : "hidden"
                   } absolute left-0 top-full p-2 bg-gray-700 rounded-md shadow-lg sm:w-40 group-hover:block`}
