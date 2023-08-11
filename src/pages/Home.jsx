@@ -1,17 +1,17 @@
 import React from "react";
 import "../styles/home.css";
-import data from "../assets/data";
+import posts from "../assets/posts";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <main className="container flex flex-col p-10 lg:flex-row lg:gap-10">
       <section className="lg:w-4/5 lg:border-r-2 ">
-        {data.map((item, index) => (
+        {posts.map((item, index) => (
           <article key={index} className="lg:flex">
             <Link to={`/post/${item.id}`}>
               <div className="my-8 rounded overflow-hidden border border-emerald-300">
-                <div className=" lg:w-64 lg:h-40 lg:flex-shrink-0">
+                <div className="w-50 md:w-64 md:h-40 lg:flex-shrink-0">
                   <img
                     className="w-full h-full object-cover"
                     src={item.image}
@@ -54,7 +54,7 @@ const Home = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-2 text-lg font-bold">Novidades</h2>
+            <h2 className="my-2 text-lg font-bold">Novidades</h2>
             <ul>
               <li>
                 <a href="#">D&D</a>

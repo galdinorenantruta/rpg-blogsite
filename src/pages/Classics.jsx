@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import data from "../assets/posts";
+import data from "../assets/classicos";
 
-const PostDetail = () => {
+const Classics = () => {
   const { id } = useParams();
   const selectedItem = data.find((item) => item.id === parseInt(id));
   if (!selectedItem) {
@@ -27,4 +27,4 @@ const PostDetail = () => {
   );
 };
 
-export default PostDetail;
+export default Classics;

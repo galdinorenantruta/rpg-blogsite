@@ -1,11 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import classicos from "../assets/classicos";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    // Feche o menu quando um link for clicado
+    setMenuOpen(false);
   };
 
   return (
@@ -38,17 +44,27 @@ const Navbar = () => {
                 <a
                   href="/"
                   className="text-white hover:underline md:hover:underline"
+                  onClick={handleLinkClick}
                 >
                   Home
                 </a>
               </li>
-              <li className="mb-2 md:mb-0">
+              <li className="mb-2 md:mb-0 group relative">
                 <a
                   href="#"
                   className="text-white hover:underline md:hover:underline"
+                  onClick={toggleMenu}
                 >
                   Clássicos
                 </a>
+                <div className="hidden absolute left-0  top-full  p-2 bg-gray-700 rounded-md shadow-lg group-hover:block sm:w-40 ">
+                  {classicos.map((item, index) => (
+                    <div key={index}>
+                      <a href={`/classic/${item.id}`}>{item.title}</a>
+                      <br />
+                    </div>
+                  ))}
+                </div>
               </li>
               <li className="mb-2 md:mb-0">
                 <a

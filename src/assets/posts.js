@@ -1,4 +1,4 @@
-const data = [
+const posts = [
   {
     id: 1,
     title: "Dungeons and Dragons",
@@ -43,4 +43,4 @@ const data = [
   },
 ];
 
-export default data;
+export default posts;

@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import PostDetail from "./pages/PostDetail";
+import Classics from "./pages/classics";
 const App = () => {
   return (
     <div>
@@ -13,7 +14,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="post/:id" element={<PostDetail />} />
+          <Route path="/post/:id" element={<PostDetail />} />
+          <Route path="/classic/:id" element={<Classics />} />
         </Routes>
       </BrowserRouter>
       <Footer />
